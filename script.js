@@ -92,11 +92,6 @@ function Main_Spring() {
 
 	function FindPathThroughtMaze(maze, position) {
 		
-		if (AlreadyTried(maze, position)) {
-			return false;
-		}
-	    
-		
 		if (ThisIsTheExit(maze, position)) {
 			return true;
 		}
@@ -128,9 +123,6 @@ function Main_Spring() {
 		deadlock = true;
 	}
 
-	function AlreadyTried(maze, position) {
-		//if (maze[position.x][position.y] == 2) return true; else return false;
-	}
 
 	function ThisIsTheExit(maze, position) {
 		if (maze[position.x][position.y] == 4) return true; else return false;
